@@ -1,3 +1,39 @@
+# Gravit Canon: GEVP + VEDS
+
+> **Status on 27 November 2026.** The current revision of the mechanism is
+> **[draft-gravit-gevp-12](https://datatracker.ietf.org/doc/draft-gravit-gevp/12/)** (2 Nov 2026), not -07.
+> The policy is still [draft-gravit-verifiable-epistemic-decision-00](https://datatracker.ietf.org/doc/draft-gravit-verifiable-epistemic-decision/00/).
+> Both are individual Internet-Drafts, not IETF standards.
+>
+> **Correction.** The text below (Canon v1.1, 12 Aug 2026) recommends theta 0.73 with "TPR 93.4 %, FPR 0.4 %".
+> Those calibration figures could not be reproduced. GEVP-08 (12 Oct 2026) replaced them with reproducible results,
+> and the threshold 0.73 is **no longer recommended**. The figures stay below only as a record of what was published.
+> "Architecture is STABLE" was the view of August 2026; revisions 08 to 12 changed the specification substantially.
+
+## Revisions of GEVP since this Canon
+
+| Revision | Date | What changed |
+|---|---|---|
+| [-07](https://datatracker.ietf.org/doc/draft-gravit-gevp/07/) | 2026-08-12 | VEDS conformance mapping (Section 10); the revision this Canon describes |
+| [-08](https://datatracker.ietf.org/doc/draft-gravit-gevp/08/) | 2026-10-12 | **Correction:** non-reproducible calibration figures of -00 to -07 replaced by reproducible results; theta 0.73 no longer recommended |
+| [-09](https://datatracker.ietf.org/doc/draft-gravit-gevp/09/) | 2026-10-13 | Complete specification, matching reference verifier v0.6.0: record format and signature, signed result (true, false, no verdict), registry under a threshold of root keys, reproducible decision record, signed receipts |
+| [-10](https://datatracker.ietf.org/doc/draft-gravit-gevp/10/) | 2026-10-22 | Safety properties (fault parameter t, forgery bound, contradiction veto), relation to RATS, time bounds from independent time-stamp authorities, CDDL data model |
+| [-11](https://datatracker.ietf.org/doc/draft-gravit-gevp/11/) | 2026-10-23 | Built on SCITT (RFC 9943) and COSE Receipts (RFC 9942): each verifier an Issuer, each record a Signed Statement; encoding described, not yet implemented |
+| [-12](https://datatracker.ietf.org/doc/draft-gravit-gevp/12/) | 2026-11-02 | Known limit stated: provenance is self-reported, so a relayed source can look like a second independent one; operators declare upstream sources; implementation status v0.7.0 |
+
+Diff of any two revisions: `https://author-tools.ietf.org/iddiff?url1=draft-gravit-gevp-07&url2=draft-gravit-gevp-12`
+
+## Where things are now
+
+- Reference implementation: [gon-foundation/verifier](https://github.com/gon-foundation/verifier) (Python and Rust, v0.7.0)
+- Reproduce every published result: [gon-foundation/gravit-eval-pack](https://github.com/gon-foundation/gravit-eval-pack)
+- Network site, docs and SDKs: [gravitopennetwork.org](https://gravitopennetwork.org/) · Foundation: [gon.foundation](https://gon.foundation/)
+- Repositories moved from `GravitOpenNetwork` and `gravit-open-network-foundation` to the organisation `gon-foundation`; old links redirect.
+
+---
+
+## Canon v1.1 (12 August 2026), kept unchanged
+
 Gravit Canon — Final v1.1 / GEVP + VEDS
 <img width="1920" height="1280" alt="grafik" src="https://github.com/user-attachments/assets/b2da6ae8-488c-4778-8922-8b959c524c3a" />
 
